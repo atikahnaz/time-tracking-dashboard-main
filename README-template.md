@@ -62,6 +62,13 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
+1. convert json to javascript object
+  - res.json(): Specific to the Fetch API's Response object.
+  - JSON.parse(): This is a standalone JavaScript function that is used to parse a JSON string into a JavaScript object
+
+2. document.querySelector and document.querySelectorAll
+  - provide more flexibility and versatility in selecting elements using various types of selectors (class names, IDs, etc.).     
+
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:
