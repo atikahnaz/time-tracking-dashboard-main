@@ -48,24 +48,26 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 1rem;
+    color: hsl(235, 45%, 61%);
 }
-.nav-bar a {
-    color: white;
-    text-decoration: none;
+.nav-bar div:hover {
+   color: white;
 }
+
 .card-box {
     background-color: hsl(15, 100%, 70%);
     background-image: url("images/icon-work.svg");
     background-repeat: no-repeat;
     background-position: right;
-    background-position-y: top;
+    background-position-y: -25%;
+    background-position-x: 94%;
     border-radius: 1rem;
 }
 .card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: end;
-    transform: translateY(30px);
+    transform: translateY(39px);
     margin-bottom: 80px;
     background-color: hsl(235, 46%, 20%);
     color: white;
@@ -76,6 +78,7 @@ body {
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 0;
+    margin-top: 0;
 }
 .card-dots {
     justify-self: end;    
@@ -87,4 +90,5 @@ body {
 .previous {
     justify-self: end;
     font-size: 0.8rem;
+    font-weight: 300;
 }
