@@ -7,9 +7,14 @@ const weekly = document.querySelector('.weekly');
 const monthly = document.querySelector('.monthly');
 const container = document.querySelector('.container');
 
+function startPage () {
+    displayData('weekly', 'week');
+    weekly.style.color = 'white';
+}
+
 function displayData (time, x) {
     container.innerHTML = '';
-
+    weekly.style.color = '';
     fetch('./data.json')
         .then(res =>res.json())
         .then(data => {
@@ -36,17 +41,21 @@ function displayData (time, x) {
                 previous.className = 'previous';
                 previous.innerHTML = `Last ${x} - ${item.timeframes[time].previous}hrs`;
                 
+                
                 card.appendChild(title);
                 card.appendChild(image);
                 card.appendChild(hours);
                 card.appendChild(previous);
                 cardBox.appendChild(card);
                 container.appendChild(cardBox);
+
                 console.log(item.title);
             }
-
         })
 }
+
+//displayData('daily', 'day');
+startPage();
 
 daily.addEventListener('click', function() {
     displayData('daily', 'day');
@@ -57,46 +66,4 @@ weekly.addEventListener('click', function() {
 monthly.addEventListener('click', function() {
     displayData('monthly', 'month');
 });
-
-
-/*function displayData (time) {
-    fetch('./data.json')
-        .then(res => res.json())
-        .then(data => {
-            for (let item of data) {
-                if (item.title == title) {
-                    current.innerHTML = `${item.timeframes[time].current}hrs`;
-                    previous.innerHTML = `Last week - ${item.timeframes[time].previous}hrs`;
-                    console.log(item.timeframes[time].current);
-                    console.log(time);
-                    console.log(title);
-                }
-                
-            }
-        });
-       
-}
-daily.addEventListener('click', function () {
-    displayData('daily');
-})
-displayData('daily');*/
-
-
-// fetch json data from data.json
-/*
-fetch('./data.json')
-    .then(res => res.json()) // convert into js object
-    .then(data => {
-        //loopthrough json object to find the title
-        for (let item of data) {
-            if (item.title == title) {
-                matchObject = item;
-                break;
-            }
-        }
-        current.innerHTML = `${matchObject.timeframes.weekly.current}hrs`;
-        previous.innerHTML = `Last week - ${matchObject.timeframes.weekly.previous}hrs`;
-        console.log(data[0]);
-    })*/
-
     

@@ -50,7 +50,7 @@ body {
     padding: 1rem;
     color: hsl(235, 45%, 61%);
 }
-.nav-bar div:hover {
+.nav-bar div:hover{
    color: white;
 }
 
