@@ -75,6 +75,14 @@ const weekly = document.querySelector('.weekly');
 weekly.style.color = '';
 ```
 
+4. To handle different format image file name and variable name.
+```css
+const imageName = item.title.replace(/\s+/g, '-').toLowerCase(); // Replace spaces with hyphens and convert to lowercase
+cardBox.style.backgroundImage = `url("images/icon-${imageName}.svg")`;
+```
+
+
+
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:
